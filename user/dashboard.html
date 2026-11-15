@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="پیش‌نمایش داشبورد کاربری PAWIX با داده‌های نمونه؛ اطلاعات حساب به سرور متصل نیست." />
+    <title>داشبورد کاربر | PAWIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/user-dashboard.css" />
+  </head>
+  <body class="dashboard-page user-dashboard">
+    <header class="dashboard-topbar">
+      <a class="brand" href="../index.html" aria-label="PAWIX - خانه">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="20" cy="16" r="5"></circle><circle cx="30" cy="12" r="5"></circle><circle cx="40" cy="16" r="5"></circle><circle cx="25" cy="26" r="5"></circle><circle cx="35" cy="26" r="5"></circle><path d="M32 35c-10 0-18 8-18 18v3h36v-3c0-10-8-18-18-18Z"></path></svg></span>
+        <span class="brand-name">PAWIX</span>
+      </a>
+      <button class="dashboard-search-open" type="button" aria-label="جستجو در محصولات" data-search-open>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16 21 21"></path></svg>
+      </button>
+      <a class="dashboard-back-link" href="../index.html">بازگشت به فروشگاه</a>
+    </header>
+    <main class="dashboard-container">
+      <div class="demo-banner" role="note">
+        پیش‌نمایش رابط کاربری با داده‌های نمونه؛ ورود، اطلاعات حساب و سفارش‌ها به هیچ سرویس واقعی متصل نیستند.
+      </div>
+      <div class="dashboard-layout">
+        <aside class="dashboard-sidebar" aria-label="منوی داشبورد کاربر">
+          <div class="dashboard-profile-mini">
+            <span class="profile-avatar" aria-hidden="true">م</span>
+            <div><strong>مریم نمونه</strong><span>حساب آزمایشی</span></div>
+          </div>
+          <nav class="dashboard-nav">
+            <a href="#overview" data-dashboard-link aria-current="page">نمای کلی</a>
+            <a href="#profile" data-dashboard-link>اطلاعات حساب کاربری</a>
+            <a href="#orders" data-dashboard-link>سفارش‌های من</a>
+            <a href="#addresses" data-dashboard-link>آدرس‌های من</a>
+            <a href="#wishlist" data-dashboard-link>علاقه‌مندی‌ها</a>
+            <a href="#settings" data-dashboard-link>تنظیمات حساب</a>
+            <a href="../pages/login.html">بازگشت به ورود (خروج واقعی فعال نیست)</a>
+          </nav>
+        </aside>
+
+        <div class="dashboard-content">
+          <section class="dashboard-panel" id="overview" data-dashboard-panel>
+            <div class="dashboard-title-row">
+              <div><span class="dashboard-eyebrow">CUSTOMER AREA</span><h1>سلام، مریم!</h1></div>
+              <span class="sample-label">داده نمونه</span>
+            </div>
+            <p class="dashboard-lead">این نمای کلی فقط برای نمایش رابط کاربری است.</p>
+            <div class="dashboard-stat-grid">
+              <article class="dashboard-stat"><span>مجموع سفارش‌ها</span><strong data-total-orders>۰</strong><small>نمونه آزمایشی</small></article>
+              <article class="dashboard-stat"><span>سفارش تکمیل‌شده</span><strong data-completed-orders>۰</strong><small>نمونه آزمایشی</small></article>
+              <article class="dashboard-stat"><span>در انتظار</span><strong data-pending-orders>۰</strong><small>نمونه آزمایشی</small></article>
+            </div>
+            <div class="dashboard-panel-heading"><h2>سفارش‌های اخیر</h2><a href="#orders" data-dashboard-link>همه سفارش‌ها</a></div>
+            <div class="responsive-table">
+              <table class="dashboard-table">
+                <thead><tr><th>شماره سفارش</th><th>تاریخ</th><th>محصول</th><th>مبلغ</th><th>وضعیت</th></tr></thead>
+                <tbody data-recent-orders></tbody>
+              </table>
+            </div>
+            <div class="dashboard-quick-links">
+              <a href="#profile" data-dashboard-link><strong>اطلاعات حساب</strong><span>نمایش پروفایل نمونه</span></a>
+              <a href="#addresses" data-dashboard-link><strong>مدیریت آدرس‌ها</strong><span>ویرایش موقت در این صفحه</span></a>
+              <a href="../pages/shop.html"><strong>ادامه خرید</strong><span>رفتن به فروشگاه PAWIX</span></a>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" id="profile" data-dashboard-panel hidden>
+            <div class="dashboard-title-row"><div><span class="dashboard-eyebrow">PROFILE</span><h1>اطلاعات حساب کاربری</h1></div><span class="sample-label">موقت و محلی</span></div>
+            <p class="dashboard-lead">ویرایش‌های این فرم فقط تا زمان باز شدن مجدد صفحه در حافظه می‌مانند.</p>
+            <form class="dashboard-form" data-profile-form>
+              <div class="dashboard-form-grid">
+                <label>نام<input name="firstName" required value="مریم" /></label>
+                <label>نام خانوادگی<input name="lastName" required value="نمونه" /></label>
+                <label>شماره موبایل<input name="phone" type="tel" value="۰۹۱۲۰۰۰۰۰۰۰" /></label>
+                <label>ایمیل<input name="email" type="email" dir="ltr" value="demo@example.com" /></label>
+              </div>
+              <button class="dashboard-primary-button" type="submit">به‌روزرسانی پیش‌نمایش</button>
+              <p class="dashboard-status" role="status" data-profile-status></p>
+            </form>
+          </section>
+
+          <section class="dashboard-panel" id="orders" data-dashboard-panel hidden>
+            <div class="dashboard-title-row"><div><span class="dashboard-eyebrow">ORDERS</span><h1>سفارش‌های من</h1></div><span class="sample-label">داده نمونه</span></div>
+            <p class="dashboard-lead">هیچ‌یک از سفارش‌های زیر خرید واقعی نیست.</p>
+            <p class="dashboard-status" role="status" data-order-status></p>
+            <div class="responsive-table">
+              <table class="dashboard-table">
+                <thead><tr><th>شماره سفارش</th><th>تاریخ</th><th>محصول</th><th>مبلغ</th><th>وضعیت</th><th>جزئیات</th></tr></thead>
+                <tbody data-order-list></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" id="addresses" data-dashboard-panel hidden>
+            <div class="dashboard-title-row"><div><span class="dashboard-eyebrow">ADDRESSES</span><h1>آدرس‌های من</h1></div><span class="sample-label">فقط پیش‌نمایش</span></div>
+            <p class="dashboard-lead">افزودن، ویرایش و حذف در این صفحه موقت است و اطلاعات شخصی ذخیره نمی‌شود.</p>
+            <div class="address-list" data-address-list></div>
+            <form class="dashboard-form address-form" data-address-form>
+              <h2 data-address-form-title>افزودن آدرس نمونه</h2>
+              <div class="dashboard-form-grid">
+                <label>عنوان<input name="title" required placeholder="مثلاً خانه" /></label>
+                <label>شهر<input name="city" required placeholder="شهر" /></label>
+                <label class="form-wide">نشانی کامل<textarea name="address" required rows="3" placeholder="نشانی آزمایشی"></textarea></label>
+              </div>
+              <label class="dashboard-check"><input name="default" type="checkbox" /> آدرس پیش‌فرض باشد</label>
+              <div class="dashboard-form-actions">
+                <button class="dashboard-primary-button" type="submit">ذخیره موقت</button>
+                <button class="dashboard-secondary-button" type="button" data-cancel-address hidden>لغو ویرایش</button>
+              </div>
+              <p class="dashboard-status" role="status" data-address-status></p>
+            </form>
+          </section>
+
+          <section class="dashboard-panel" id="wishlist" data-dashboard-panel hidden>
+            <div class="dashboard-title-row"><div><span class="dashboard-eyebrow">WISHLIST</span><h1>علاقه‌مندی‌ها</h1></div><span class="sample-label">محصولات نمونه</span></div>
+            <p class="dashboard-lead">این فهرست نمونه از کاتالوگ PAWIX خوانده شده و به حساب کاربر متصل نیست.</p>
+            <div class="wishlist-grid" data-user-wishlist></div>
+          </section>
+
+          <section class="dashboard-panel" id="settings" data-dashboard-panel hidden>
+            <div class="dashboard-title-row"><div><span class="dashboard-eyebrow">SETTINGS</span><h1>تنظیمات حساب</h1></div><span class="sample-label">غیرفعال</span></div>
+            <p class="dashboard-lead">تغییر رمز عبور تا اتصال سرویس احراز هویت انجام نمی‌شود.</p>
+            <form class="dashboard-form" data-password-form novalidate>
+              <div class="dashboard-form-grid">
+                <label>رمز فعلی<input type="password" name="currentPassword" autocomplete="current-password" required /></label>
+                <label>رمز جدید<input type="password" name="newPassword" autocomplete="new-password" minlength="8" required /></label>
+                <label>تکرار رمز جدید<input type="password" name="confirmPassword" autocomplete="new-password" required /></label>
+              </div>
+              <button class="dashboard-primary-button" type="submit">بررسی فرم (بدون تغییر رمز)</button>
+              <p class="dashboard-status" role="status" data-password-status></p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="../js/store.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/user-dashboard.js"></script>
+  </body>
+</html>
